@@ -76,3 +76,6 @@ if ( ! function_exists( '_s_saurabh_register_task' ) ) {
 function _s_saurabh_register_task_status_meta_box() {
     add_meta_box( '_s_saurabh_task_status', __( 'Task Status', '_s-saurabh' ), '_s_saurabh_task_status_metabox_ui', 'task' );
 }
+
+// hook task metabox registration into add_metaboxes hook
+add_action( 'add_metaboxes', '_s_saurabh_register_task_status_meta_box' );
