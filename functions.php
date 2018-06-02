@@ -79,3 +79,12 @@ function _s_saurabh_register_task_status_meta_box() {
 
 // hook task metabox registration into add_metaboxes hook
 add_action( 'add_metaboxes', '_s_saurabh_register_task_status_meta_box' );
+
+/**
+ * Displays the Task Status UI
+ *
+ * @param object $post
+ */
+function _s_saurabh_task_status_metabox_ui( $post ){
+	// add code to display task status ui
+}
