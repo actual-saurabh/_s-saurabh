@@ -69,3 +69,10 @@ if ( ! function_exists( '_s_saurabh_register_task' ) ) {
 	// hook registration into init
 	add_action( 'init', '_s_saurabh_register_task', 0 );
 }
+
+/**
+ * Registers the task status metabox
+ */
+function _s_saurabh_register_task_status_meta_box() {
+    add_meta_box( '_s_saurabh_task_status', __( 'Task Status', '_s-saurabh' ), '_s_saurabh_task_status_metabox_ui', 'task' );
+}
