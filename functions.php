@@ -74,17 +74,19 @@ if ( ! function_exists( '_s_saurabh_register_task' ) ) {
  * Registers the task status metabox
  */
 function _s_saurabh_register_task_status_meta_box() {
-    add_meta_box( '_s_saurabh_task_status', __( 'Task Status', '_s-saurabh' ), '_s_saurabh_task_status_metabox_ui', 'task' );
+	add_meta_box(
+		'_s_saurabh_task_status', __( 'Task Status', '_s-saurabh' ), '_s_saurabh_task_status_metabox_ui', 'task'
+	);
 }
 
 // hook task metabox registration into add_metaboxes hook
-add_action( 'add_metaboxes', '_s_saurabh_register_task_status_meta_box' );
+add_action( 'add_meta_boxes', '_s_saurabh_register_task_status_meta_box' );
 
 /**
  * Displays the Task Status UI
  *
  * @param object $post
  */
-function _s_saurabh_task_status_metabox_ui( $post ){
+function _s_saurabh_task_status_metabox_ui( $post ) {
 	// add code to display task status ui
 }
