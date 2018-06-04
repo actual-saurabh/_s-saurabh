@@ -88,5 +88,14 @@ add_action( 'add_meta_boxes', '_s_saurabh_register_task_status_meta_box' );
  * @param object $post
  */
 function _s_saurabh_task_status_metabox_ui( $post ) {
-	// add code to display task status ui
+
+	(int) $task_status = get_post_meta( $post->ID , '_s_saurabh_task_status', true );
+	?>
+	<input type="checkbox" name="_s_saurabh_task_status" id="_s_saurabh_task_status" value="1" <?php checked( $task_status ); ?>>
+	<label for="_s_saurabh_task_status">Task completed?</label>
+	<?php
 }
+
+
+
+
